@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from schemas.user_schema import UserRegister, UserLogin
 from schemas.token_schema import Token
 from controllers.auth_controller import AuthController
-from middleware.auth_middleware import get_current_user, get_current_admin
+from middlewares.auth_middleware import get_current_user, get_current_admin
 from models.user import UserRole
 
 router = APIRouter(prefix="/api/auth", tags=["Authentication"])
